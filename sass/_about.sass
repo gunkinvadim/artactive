@@ -1,0 +1,48 @@
+.about
+    padding-top: 108px
+    background: $section-background_light_large
+    background-size: cover
+    &-content
+        display: flex
+        justify-content: center
+        flex-basis: 50%
+    &-img
+        min-width: 45%
+        background: url(../img/about/scheme_large.png) center no-repeat
+        background-size: 100% auto
+    &-text
+        margin-left: 75px
+    &__lines
+        bottom: -67px
+
+
+@media (max-width: 991px)
+    .about
+        background: $section-background_light_medium
+        &-content
+            flex-direction: column
+        &-text
+            margin-left: 0
+        &-img
+            order: 1
+            margin-top: 32px
+            min-height: 455px
+            width: 100%
+            min-width: 0
+            background: url(../img/about/scheme_medium.png) center no-repeat
+            background-size: contain
+    
+
+@media (max-width: 576px)
+    .about
+        padding-top: 39px
+        padding-bottom: 55px
+        &-img
+            margin-top: 41px
+            background: url(../img/about/scheme_small.png) center no-repeat
+            min-height: 685px
+
+
+@media (max-width: 576px)
+    .about
+        background: $section-background_light_small

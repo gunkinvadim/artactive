@@ -1,0 +1,125 @@
+.section
+    &__title
+        font-family: 'Muller' sans-serif
+        font-size: 30px
+        font-weight: 700
+        color: $text-color_bright
+    &__subtitle
+        position: relative
+        margin-top: 79px
+        font-family: 'Muller' sans-serif
+        font-size: 32px
+        font-weight: 600
+        line-height: 42px
+        color: $text-color_dark
+        span
+            position: relative
+            z-index: 1
+        &__img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -76px
+            z-index: 0
+            height: 160px
+            width: 160px
+            background-size: auto 100%
+            &_1
+                background: url(../img/services/subtitle-background_1.png) center no-repeat
+            &_2
+                background: url(../img/services/subtitle-background_2.png) center no-repeat
+            &_3
+                background: url(../img/services/subtitle-background_3.png) center no-repeat
+    &__description
+        margin-top: 60px
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px
+        color: $text-color_grey
+        p
+            margin-top: 30px
+        &__list
+            margin-left: 20px
+            list-style-type: disc
+    &__lines
+        height: 130px
+        width: 11px
+        background: url(../img/section-lines.png) center no-repeat
+        position: relative
+        left: 50%
+
+
+.button
+    border: none
+    border-radius: 25px
+    padding: 18px 43px
+    background-color: $button-color
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    color: $text-color_light
+    cursor: pointer
+
+.form
+    &-text
+        color: $text-color_light
+        &__question
+            font-size: 16px
+            line-height: 30px
+            font-style: italic
+        &__title
+            font-size: 20px
+            line-height: 30px
+            font-weight: 400
+    &-container
+        margin-top: 29px
+    &__input
+        margin-left: 39px
+        width: 211px
+        border: none
+        border-bottom: 1px solid #cccccc
+        background-color: transparent
+        padding: 10px 15px 10px 15px
+        outline-color: $button-color
+        &::placeholder
+            color: $text-color_light
+            font-size: 14px
+            line-height: 24px
+            font-style: italic
+        &:first-child
+            margin-left: 0
+    &__button
+        margin-left: 48px
+
+
+@media (max-width: 1299px)
+    .section
+        &__subtitle
+            &__img
+                left: -50px
+
+
+@media (max-width: 991px)
+    .section
+        &__subtitle
+            margin-top: 52px
+            &__img
+                left: -4px
+        &__description
+            margin-top: 35px
+            p
+                margin-top: 35px
+
+
+@media (max-width: 576px)
+    .section
+        &__subtitle
+            margin-top: 35px
+            font-size: 24px
+            line-height: 30px
+            &__img
+                left: -1px
+        &__description
+            margin-top: 42px
+        &__lines
+            display: none

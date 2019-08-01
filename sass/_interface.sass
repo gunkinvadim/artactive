@@ -59,6 +59,8 @@
     text-transform: uppercase
     color: $text-color_light
     cursor: pointer
+    &:focus
+        outline: none
 
 .form
     &-text
@@ -90,6 +92,16 @@
             margin-left: 0
     &__button
         margin-left: 48px
+
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    background-color: rgba(#000000, 0.4)
+    width: 100%
+    height: 100%
 
 
 @media (max-width: 1299px)

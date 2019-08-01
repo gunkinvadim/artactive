@@ -1,34 +1,23 @@
-window.addEventListener('DOMContentLoaded', function() {
+// show menu
+$(function() {
+    let openBtn = $('.header-menu__open-button'),
+        closeBtn = $('.header-menu__close-button'),
+        overlay = $('.overlay'),
+        menu = $('.header-menu'),
+        menuItem = $('.header-menu__item');
 
-    'use strict';
-
-    // Header Menu
-    let headerMenuOpenButton = document.querySelector('.header-menu__open-button'),
-    headerMenu = document.querySelector('.header-menu'),
-    headerMenuOverlay = document.querySelector('.header-menu__overlay'),
-    headerMenuCloseButton = document.querySelector('.header-menu__close-button'),
-    headerMenuItem = document.querySelectorAll('.header-menu__item');
-
-
-
-    headerMenuOpenButton.addEventListener('click', function() {
-        headerMenuOverlay.style.display = 'block';
-        headerMenu.style.display = 'flex';
+    openBtn.on('click', function() {
+        overlay.show();
+        menu.toggleClass('header-menu_active');
     });
 
-    headerMenuCloseButton.addEventListener('click', function() {
-        headerMenuOverlay.style.display = 'none';
-        headerMenu.style.display = 'none';
+    closeBtn.click(function() {
+        overlay.hide();
+        menu.toggleClass('header-menu_active');
     });
 
-    headerMenuItem.addEventListener('click', function() {
-        headerMenuOverlay.style.display = 'none';
-        headerMenu.style.display = 'none';
+    menuItem.click(function() {
+        overlay.hide();
+        menu.toggleClass('header-menu_active');
     });
-
-    if(document.documentElement.clientWidth > 991) {
-        headerMenu.style.display = 'flex';
-    }
-
-
 });

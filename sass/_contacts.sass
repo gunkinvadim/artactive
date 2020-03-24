@@ -1,0 +1,79 @@
+.contacts
+    height: 650px
+    position: relative
+    &-map
+        height: 100%
+        width: 100%
+        position: relative
+        &.small
+            display: none
+    &-card
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        margin-left: 50px
+        box-shadow: 10px 20px 20px rgba(#000000, 0.3) 
+        border-radius: 10px
+        padding: 88px 88px 118px 88px
+        background-color: #ffffff
+        &__text
+            margin-top: 60px
+            p
+                position: relative
+                margin-top: 25px
+                margin-left: 15px
+                font-size: 14px
+                line-height: 24px
+                color: $text-color_grey
+                &::before
+                    position: relative
+                    left: -15px
+                    top: 4px
+                    content: ''
+                    display: inline-block
+                    height: 17px
+                    width: 17px
+                &.address::before
+                    background: url(../img/contacts/address.png) center no-repeat
+                &.mail::before
+                    background: url(../img/contacts/mail.png) center no-repeat
+                &.tel::before
+                    background: url(../img/contacts/tel.png) center no-repeat
+                &:first-child
+                    margin-top: 0
+
+
+@media (max-width: 991px)
+    .contacts
+        height: 550px
+        &-card
+            padding: 66px 60px 80px 60px
+
+
+@media (max-width: 575px)
+    .contacts
+        &-map
+            &.small
+                display: block
+            &.large
+                display: none
+        &-card
+            top: 65px
+            left: 50%
+            transform: translateX(-50%)
+            margin-left: 0
+            width: 300px
+            padding: 45px 40px 60px 40px
+            &__text
+                margin-top: 30px
+
+@media (max-width: 469px)
+    .contacts
+        &-card
+            width: 250px
+            
+@media (max-width: 389px)
+    .contacts
+        &-card
+            width: 200px
+            padding: 35px 10px 40px 20px

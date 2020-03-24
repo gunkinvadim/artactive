@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ArtActive</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.png"/>
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap&subset=cyrillic"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="fonts/Muller.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,9 +20,9 @@
     <header class="header">
         <div class="container">
             <section class="header-top">
-            <h1 class="header__title">ArtActive</h1>
+                <h1 class="header__title">ArtActive</h1>
                 <div class="header-menu">
-                    <button class="header-menu__close-button">&times</button>
+                    <button class="close-button">&times</button>
                     <nav class="header-menu__nav">
                         <a href="#about" class="header-menu__item">О нас</a>
                         <a href="#services" class="header-menu__item">Услуги</a>
@@ -28,10 +32,10 @@
                     </nav>
                     <!-- /.header-menu__nav -->
                     <p class="header-menu__phone">+7 (920) 148 81 31</p>
-                    <button class="header-menu__button button">Заказать звонок</button>
+                    <button class="header-menu__button button open-popup">Заказать звонок</button>
                 </div>
                 <!-- /.header-menu -->
-                <button class="header-menu__open-button"><img src="img/header/menu-button.png" alt="Меню"></button>
+                <button class="menu-button"><img src="img/header/menu-button.png" alt="Меню"></button>
             </section>
             <!-- /.header-top -->
 
@@ -51,7 +55,7 @@
                         </p>
                         <!-- /.main-text__description -->
                         <div class="main__button-container">
-                            <button class="button main-text__button">Заказать печать</button>
+                            <button class="button main-text__button open-popup">Заказать печать</button>
                             <p class="main-text__note">
                                 с доставкой по Ярославлю<br>и Ярославской области
                             </p>
@@ -102,7 +106,7 @@
                     <!-- /.about-text -->
                 </div>
                 <!-- /.about-content -->
-                <div class="section__lines about__lines"></div>
+                <div class="section__lines"></div>
             </div>
             <!-- /.container -->
         </section>
@@ -144,7 +148,7 @@
                                 </p>
                             </div>
                             <!-- /.form-text -->
-                            <button class="button services-1-plate__button">
+                            <button class="button services-1-plate__button open-popup">
                                 Заказать
                             </button>
                         </div>
@@ -153,18 +157,26 @@
                     <!-- /.services-text -->
                     <div class="services-1-slider">
                         <ul class="services-1-slider__slides">
-                            <li class="services-1-slider__slides__item"><img src="img/services/slide-1.jpg" alt="Слайд 1"></li>
+                            <li><img src="img/services/slide-1.jpg" alt="Слайд 1"></li>
+                            <li><img src="img/services/slide-2.jpg" alt="Слайд 2"></li>
+                            <li><img src="img/services/slide-3.jpg" alt="Слайд 3"></li>
                         </ul>
                         <!-- /.services-slider__slides -->
                         <div class="services-1-slider-control">
-                            <div class="services-1-slider__arrows">
-                                <button class="services-1-slider__arrow services-1-slider__arrow-left"></button>
-                                <button class="services-1-slider__arrow services-1-slider__arrow-right"></button>
+                            <div class="slider-arrows">
+                                <button class="slider-arrow slider-arrow_left"></button>
+                                <button class="slider-arrow slider-arrow_right"></button>
                             </div>
                             <!-- /.services-1-slider-arrows -->
                             <ul class="services-1-slider__descriptions">
-                                <li class="services-1-slider__descriptions__item">
+                                <li>
                                     Растяжка на ул. Ленина
+                                </li>
+                                <li>
+                                    Вывеска для сервисного центра
+                                </li>
+                                <li>
+                                    Наружная реклама стоматологической клиники
                                 </li>
                             </ul>
                             <!-- /.services-slider__descriptions -->
@@ -181,7 +193,7 @@
                                 </h5>
                             </div>
                             <!-- /.form-text -->
-                            <button class="button services-1-plate__button">
+                            <button class="button services-1-plate__button open-popup">
                                 Заказать
                             </button>
                         </div>
@@ -205,13 +217,13 @@
                             Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной плотности, на глянцевом и матовом холсте или на самоклеющейся пленке. также можем предложить обработку и редактирование ваших фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные эффекты
                         </p>
                         <!-- /.section__description -->
-                        <button class="button services-2-text__button">Оставить заявку</button>
+                        <button class="button services-2-text__button open-popup">Оставить заявку</button>
                         <!-- /.button -->
                     </article>
                     <!-- /.services-2-text -->
                 </div>
                 <!-- /.container -->
-                <div class="section__lines services-2__lines"></div>
+                <div class="section__lines"></div>
             </section>
             <!-- /.services-2 -->
 
@@ -237,28 +249,28 @@
                     </article>
                     <!-- /.services-3-text -->
 
-                    <form action="#" class="form services-3-form">
-                        <div class="form-text services-3-form-text">
-                            <span class="form-text__question services-3-form-text__question">
+                    <form action="#" class="form">
+                        <div class="form-text">
+                            <span class="form-text__question">
                                 Есть вопросы?
                             </span>
-                            <!-- /.form-text__question services-3-form-text__question -->
-                            <h5 class="form-text__title services-3-form-text__title">
+                            <!-- /.form-text__question -->
+                            <h5 class="form-text__title">
                                 Оставьте заявку на консультацию
                             </h5>
-                            <!-- /.form-text__title services-3-form-text__title -->
+                            <!-- /.form-text__title -->
                         </div>
-                        <!-- /.form-text services-3-form-text -->
-                        <div class="services-3-form-container form-container">
-                            <input class="form__input services-3-form__input" name="name" type="text" placeholder="Имя">
-                            <input class="form__input services-3-form__input" name="phone" type="tel" required placeholder="Телефон">
-                            <button class="button form__button services-3-form__button">
+                        <!-- /.form-text -->
+                        <div class="form-container">
+                            <input class="form__input form__input_dark" name="name" type="text" placeholder="Имя">
+                            <input class="form__input form__input_dark" name="phone" type="tel" required placeholder="Телефон">
+                            <button class="button form__button">
                                 Отправить
                             </button>
                         </div>
                         <!-- /.form-container -->
                     </form>
-                    <!-- /.form services-3-form -->
+                    <!-- /.form -->
                 </div>
                 <!-- /.container -->
             </section>
@@ -266,9 +278,290 @@
         </section>
         <!-- /.services -->
 
-    <div class="overlay"></div>
+        <section id="reviews" class="section reviews">
+            <div class="container">
+
+                <h3 class="section__title">
+                    3. Отзывы
+                </h3>
+
+                <div class="reviews-slider">
+                    <div class="reviews-item">
+                        <div class="reviews-item-img">
+                            <img src="img/reviews/review-1.png" alt="фото">
+                        </div>
+                        <!-- /.reviews-item__img -->
+                        
+                        <div class="reviews-item-text">
+                            <p class="reviews-item-text__description">
+                                Обратился в компанию АртАктив за визитками.
+                                Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать.
+                                Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+                                Советую!
+                            </p>
+                            <p class="reviews-item-text__name">
+                                Александров Максим, 24 года
+                            </p>
+                            <a class="reviews-item-text__link" href="http://vk.com/mr.sharp">
+                                vk.com/mr.sharp
+                            </a>
+                        </div>
+                        <!-- /.review-item__text -->
+                    </div>
+                    <!-- /.reviews-item -->
+
+                    <div class="reviews-item">
+                        <div class="reviews-item-img">
+                            <img src="img/reviews/review-2.png" alt="фото">
+                        </div>
+                        <!-- /.reviews-item__img -->
+                        <div class="reviews-item-text">
+                            <p class="reviews-item-text__description">
+                                Хороший сервис, всё сделали качественно и в установленные сроки.
+                                Обязательно порекомендую знакомым!
+                            </p>
+                            <p class="reviews-item-text__name">
+                                Семёнова Оксана, 27 лет
+                            </p>
+                            <a class="reviews-item-text__link" href="http://vk.com/oksanasemenova">
+                                vk.com/oksanasemenova
+                            </a>
+                        </div>
+                        <!-- /.review-item__text -->
+                    </div>
+                    <!-- /.reviews-item -->
+
+                    <div class="reviews-item">
+                        <div class="reviews-item-img">
+                            <img src="img/reviews/review-3.png" alt="фото">
+                        </div>
+                        <!-- /.reviews-item__img -->
+                        <div class="reviews-item-text">
+                            <p class="reviews-item-text__description">
+                                Обратился за печатью наружной рекламы.
+                                Ребята молодцы, всё сделали быстро и на совесть.
+                            </p>
+                            <p class="reviews-item-text__name">
+                                Петров Сергей, 30 лет
+                            </p>
+                            <a class="reviews-item-text__link" href="http://vk.com/petrov1990">
+                                vk.com/petrov1990
+                            </a>
+                        </div>
+                        <!-- /.review-item__text -->
+                    </div>
+                    <!-- /.reviews-item -->
+
+                    <div class="slider-arrows">
+                        <button class="slider-arrow slider-arrow_left"></button>
+                        <button class="slider-arrow slider-arrow_right"></button>
+                    </div>
+                    <!-- /.services-1-slider-arrows -->
+                </div>
+                <!-- /.reviews-slider -->
+
+            </div>
+            <!-- /.container -->
+
+        </section>
+        <!-- /.section reviews -->
+
+
+        <section id="faq" class="section faq">
+            <div class="container">
+
+                <h3 class="section__title">
+                    4. Частые вопросы (FAQ)
+                </h3>
+
+                <div class="faq-block">
+
+                    <div class="faq-column">
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                Что такое макет?
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                Макет — это будущее печатное изделие в электронном формате.
+                                Верстают (собирают) макет в специализированном программном обеспечении. 
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                У меня есть готовый макет
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                Вы можете привезти его к нам в офис на любом удобном для вас носителе (диск, флешка).
+                                В присутствии вас мы обработаем ваш макет и отправим его в производство.
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                У меня нет макета
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                В нашем штате работают професиональные дизайнеры,
+                                которые с ваших слов или в вашем присутствии сверстают макет,
+                                который после утверждения также будет отправлен в печать.
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                    </div>
+                    <!-- /.faq-column -->
+
+                    <div class="faq-column">
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                Сколько времени занимает печать?
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                В том случае если изображение готово к печати,
+                                изготовление занимает около 3 часов.
+                                Также время изготовления зависит от нашей загруженности.
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                Я не могу приехать к вам в офис
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                Отправьте нам изображение по электронной почте, укажите свой телефон.
+                                Мы свяжемся с вами для уточнения деталей. Готовое изделие мы доставим вам курьером.
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                        <div class="faq-item">
+                            <h4 class="faq-item__question">
+                                Вызов курьера бесплатный?
+                            </h4>
+                            <!-- /.faq-item__question -->
+                            <p class="faq-item__answer">
+                                В зависимости от соимости заказа, курьер может доставить вам продукцию бесплатно
+                                (при соимости от 600 руб.) или от 150 руб. в пределах Ярославля
+                                и до 500 руб. в пределах Ярославской области.
+                            </p>
+                            <!-- /.faq-item__answer -->
+                        </div>
+                        <!-- /.faq-item -->
+                    </div>
+                    <!-- /.faq-column -->
+
+                </div>
+                <!-- /.faq-block -->
+
+                <form action="#" class="form">
+                    <div class="form-text">
+                        <span class="form-text__question">
+                            Остались вопросы?
+                        </span>
+                        <!-- /.form-text__question -->
+                        <h5 class="form-text__title">
+                            Оставьте заявку на консультацию
+                        </h5>
+                        <!-- /.form-text__title -->
+                    </div>
+                    <!-- /.form-text -->
+                    <div class="form-container">
+                        <input class="form__input" name="name" type="text" placeholder="Имя">
+                        <input class="form__input" name="phone" type="tel" required placeholder="Телефон">
+                        <button class="button form__button">
+                            Отправить
+                        </button>
+                    </div>
+                    <!-- /.form-container -->
+                </form>
+                <!-- /.form -->
+
+            </div>
+            <!-- /.container -->
+            <div class="section__lines"></div>
+        </section>
+        <!-- /#faq.section faq -->
+
+        <section id="contacts" class="section contacts">
+            <div class="contacts-map large">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3715a3286e91ca15a345d18639581cd6f57bb725906d1436cb7c269525f8576&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+                ></script>
+            </div>
+            <div class="contacts-map small">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A372c4b40bcc1ff4e19df3d228e194b39c537b75a9ec79296f55daa4d4801a933&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+                ></script>
+            </div>
+
+            <div class="container">
+                <div class="contacts-card">
+                    <h3 class="section__title">
+                        5. Контакты
+                    </h3>
+                    <div class="contacts-card__text">
+                        <p class="address">г. Ярославль, проспект Октября, 88</p>
+                        <p class="mail">art-aktiv.76@mail.ru</p>
+                        <p class="tel">+7 (920) 148 81 31</p>
+                    </div>
+                    <!-- /.contacts-card__text -->
+                </div>
+                <!-- /.contacts-text -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /#contacts.section contacts -->
+
 
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+                ООО «АртАктив», 2020 ©
+            </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+
+    <section class="popup">
+        <button class="close-button">&times</button>
+        <form action="#" class="form">
+            <div class="form-text">
+                <span class="form-text__question">
+                    Есть вопросы?
+                </span>
+                <!-- /.form-text__question -->
+                <h5 class="form-text__title">
+                    Оставьте заявку на консультацию
+                </h5>
+                <!-- /.form-text__title -->
+            </div>
+            <!-- /.form-text -->
+            <div class="form-container">
+                <input class="form__input" name="name" type="text" placeholder="Имя">
+                <input class="form__input" name="phone" type="tel" required placeholder="Телефон">
+                <button class="button form__button">
+                    Отправить
+                </button>
+            </div>
+            <!-- /.form-container -->
+        </form>
+        <!-- /.form -->
+    </section>
+    <!-- /.popup -->
+
+    <div class="overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 

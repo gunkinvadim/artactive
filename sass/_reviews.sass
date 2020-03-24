@@ -1,0 +1,83 @@
+.reviews
+    padding-top: 134px
+    padding-bottom: 60px
+    background: $section-background_light_large
+    &-slider
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+        .slider-arrows
+            margin-top: 43px
+    &-item
+        display: none
+        margin-top: 85px
+        border: none
+        border-radius: 10px
+        box-shadow: 0 0 5px 5px #faf8fb
+        background-color: #ffffff
+        padding: 61px 58px 57px 75px
+        &.active
+            display: flex
+            align-items: center
+        &-text
+            margin-left: 42px
+            &__description
+                font-size: 14px
+                font-weight: 400
+                line-height: 24px
+                color: $text-color_grey
+            &__name
+                margin-top: 35px
+                font-weight: 600
+            &__link
+                display: inline-block
+                text-decoration: none
+                margin-top: 12px
+
+@media (max-width: 1199px)
+    .reviews
+        padding-top: 90px
+        padding-bottom: 40px
+        &-slider
+            width: 100%
+
+
+@media (max-width: 991px)
+    .reviews
+        background: $section-background_light_medium
+        
+
+@media (max-width: 767px)
+    .reviews
+        padding-top: 76px
+        &-item
+            margin-top: 60px
+            padding: 61px 28px 57px 35px
+            &-text
+                &__name
+                    margin-top: 20px
+
+
+@media (max-width: 575px)
+    .reviews
+        background: $section-background_light_small
+        padding-top: 33px
+        padding-bottom: 30px
+        &-slider
+            .slider-arrows
+                margin-top: 47px
+                margin-left: auto
+                margin-right: auto
+                width: 228px
+        .section__title
+            display: none
+        &-item
+            margin-top: 0
+            padding: 61px 25px 50px 20px
+            &.active
+                flex-direction: column
+            &-text
+                margin-top: 48px
+                margin-left: 0
+                &__name
+                    margin-top: 45px

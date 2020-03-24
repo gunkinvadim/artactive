@@ -38,8 +38,11 @@
             margin-left: 98px
             align-self: flex-end
             &__slides
-                &__item
+                li
+                    display: none
                     max-width: 569px
+                    &.active
+                        display: block
                     img
                         height: 460px
                         max-width: 100%
@@ -48,24 +51,22 @@
                         box-shadow: 0 10px 40px
             &-control
                 margin-top: 36px
+                height: 50px
                 display: flex
-            &__arrow
-                border: none
-                min-width: 90px
-                height: 30px
-                &-left
-                    background: url(../img/services/arrow-left.png) center no-repeat
-                &-right
-                    margin-left: 43px
-                    background: url(../img/services/arrow-right.png) center no-repeat
+                align-items: center
+                .slider-arrows
+                    width: 60%
             &__descriptions
-                margin-left: 59px
-                margin-top: 7px
-                &__item
+                width: 40%
+                li
+                    display: none
                     font-size: 13px
                     line-height: 16px
                     font-weight: 400
                     color: $text-color_grey
+                    &.active
+                        display: block
+
 
 @media (max-width: 1199px)
     .services
@@ -78,7 +79,7 @@
                 margin-left: 30px
                 width: 48%
                 &__slides
-                    &__item
+                    li
                         max-width: 550px
                         img
                             height: 400px
@@ -106,16 +107,13 @@
                 margin-top: 48px
                 width: 100%
                 &__slides
-                    &__item
+                    li
                         min-width: 100%
                         img
                             width: 100%
                 &-control
                     margin-top: 36
                     justify-content: space-between
-                &__arrow
-                    &-right
-                        margin-left: 43px
 
 
 @media (max-width: 669px)
@@ -135,19 +133,25 @@
             &-slider
                 margin-top: 39px
                 &__slides
-                    &__item
+                    li
                         height: 187px
                         img
                             height: 100%
                 &-control
                     flex-direction: column
-                    margin-top: 19px
-                &__arrows
+                    margin-top: 35px
+                    height: auto
+                    .slider-arrows
+                        width: auto
+                &__descriptions
+                    height: auto
+                    width: auto
+                    margin-left: 0
+                    text-align: center
+                .slider-arrows
                     order: 1
                     margin-top: 30px
                     align-self: center
-                &__descriptions
-                    margin-left: 0
             &-plate
                 margin-top: 35px
 
@@ -181,7 +185,7 @@
                 margin-top: 0
             &__button
                 margin-top: 60px
-        &__lines
+        .section__lines
             bottom: -515px
 
 
@@ -202,7 +206,7 @@
         &-2
             padding-bottom: 400px
             background: url(../img/services/services-2__wallpaper_large.png) -300px 75% no-repeat, $section-background_light_large
-            &__lines
+            .section__lines
                 bottom: -465px
 
 @media (max-width: 991px)
@@ -216,7 +220,7 @@
                 max-width: 75%
                 &__button
                     margin-top: 50px
-            &__lines
+            .section__lines
                 bottom: -365px
 
 @media (max-width: 575px)
@@ -254,7 +258,7 @@
             max-width: 50%
             &__list
                 margin-top: 30px
-        &-form
+        .form
             margin-top: 120px
             &-text
                 color: $text-color_dark
@@ -293,7 +297,7 @@
             background-size: 1000px auto
             &-text
                 max-width: 90%
-            &-form
+            .form
                 &-container
                     display: flex
                     flex-direction: column
@@ -326,7 +330,7 @@
         &-3
             background: url(../img/services/services-3__wallpaper_medium.png) 35% 92% no-repeat, $section-background_darkened
             background-size: 1000px auto
-            &-form
+            .form
                 width: 243px
                 &__input
                     width: 211px
@@ -342,7 +346,7 @@
             background: $section-background_darkened
             &-text
                 max-width: 100%
-            &-form
+            .form
                 padding-top: 400px
                 position: relative
                 margin-top: 53px
@@ -364,7 +368,7 @@
 @media (max-width: 449px)
     .services
         &-3
-            &-form
+            .form
                 padding-top: 300px
                 margin-top: 20px
                 &::before

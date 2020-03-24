@@ -18,7 +18,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера GMAIL
     $mail->Username   = 'artactive2020'; // Логин на почте
-    $mail->Password   = 'iaiatia0'; // Пароль на почте
+    $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('artactive2020@gmail.com', 'Art Active'); // Адрес самой почты и имя отправителя

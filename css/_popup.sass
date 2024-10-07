@@ -1,4 +1,4 @@
-.popup
+.popup, .thanks-popup
     position: fixed
     z-index: 3
     top: -100%
@@ -28,3 +28,17 @@
             margin-top: 40px
             margin-left: 0
             width: 107%
+
+.thanks-popup
+    max-width: 300px
+    text-align: center
+    &__title
+        font-size: 30px
+        font-weight: 600
+        line-height: 30px
+        color: $text-color_light
+    &__text
+        margin-top: 30px
+        font-size: 20px
+        line-height: 26px
+        color: $text-color_light

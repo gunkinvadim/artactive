@@ -5,6 +5,8 @@ $(function() {
     const   overlay = $('.overlay'),
             menu = $('.header-menu'),
             menuItem = $('.header-menu__item');
+            popup = $('.popup');
+            thanksPopup = $('.thanks-popup');
 
     {
         const   openBtn = $('.header .menu-button'),
@@ -36,9 +38,8 @@ $(function() {
     // show popup
 
     {
-        const   popup = $('.popup'),
-                openBtn = $('.open-popup'),
-                closeBtn = $('.popup .close-button');
+        const   openBtn = $('.open-popup'),
+                closeBtn = $('.popup .close-button, .thanks-popup .close-button');
 
         openBtn.click(function() {
             overlay.show();
@@ -49,11 +50,13 @@ $(function() {
         closeBtn.click(function() {
             overlay.hide();
             popup.removeClass('active');
+            thanksPopup.removeClass('active');
         })
 
         overlay.click(function() {
             overlay.hide();
             popup.removeClass('active');
+            thanksPopup.removeClass('active');
         })
     }
 
@@ -130,6 +133,9 @@ $(function() {
                     if (msg == 'ok') {
                         alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
                         $('.form').trigger('reset'); // очистка формы
+                        popup.removeClass('active');
+                        overlay.show();
+                        thanksPopup.addClass('active');
                     } else {
                         alert('Что-то пошло не так! Попробуйте повторить отправку.');
                     }

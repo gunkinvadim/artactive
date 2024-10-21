@@ -122,25 +122,30 @@ $(function() {
         'use strict';
         $('.form').on('submit', function(e) {
             e.preventDefault();
-            $.ajax({
-                url: '../send.php',
-                type: 'POST',
-                contentType: false,
-                processData: false,
-                data: new FormData(this),
-                success: function(msg) {
-                    console.log(msg);
-                    if (msg == 'ok') {
-                        alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-                        $('.form').trigger('reset'); // очистка формы
+            // $.ajax({
+            //     url: '../send.php',
+            //     type: 'POST',
+            //     contentType: false,
+            //     processData: false,
+            //     data: new FormData(this),
+            //     success: function(msg) {
+            //         console.log(msg);
+            //         if (msg == 'ok') {
+            //             // alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+            //             $('.form').trigger('reset'); // очистка формы
+            //             popup.removeClass('active');
+            //             overlay.show();
+            //             thanksPopup.addClass('active');
+            //         } else {
+            //             alert('Что-то пошло не так! Попробуйте повторить отправку.');
+            //         }
+            //     }
+            // });
+
+            $('.form').trigger('reset'); // очистка формы
                         popup.removeClass('active');
                         overlay.show();
                         thanksPopup.addClass('active');
-                    } else {
-                        alert('Что-то пошло не так! Попробуйте повторить отправку.');
-                    }
-                }
-            });
         });
     });
 });
